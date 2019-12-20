@@ -13,12 +13,16 @@ navBar.addEventListener('click', selectNavOption);
 
 function selectNavOption(event) {
   if (event.target.classList.contains('nav-button')) {
-    for (var i = 0; i < navButtons.length; i++) {
-      navButtons[i].classList.remove('selected')
-    }
-    event.target.classList.add('selected');
+    highlightNavButton(event);
     switchContent(event);
   }
+}
+
+function highlightNavButton(event) {
+  for (var i = 0; i < navButtons.length; i++) {
+    navButtons[i].classList.remove('selected')
+  }
+  event.target.classList.add('selected');
 }
 
 function switchContent(event) {
