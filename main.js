@@ -1,3 +1,4 @@
+var header = document.querySelector('header');
 var navBar = document.querySelector('nav');
 var navButtons = document.querySelectorAll('.nav-button');
 var allCourses = document.querySelector('#all-courses');
@@ -5,9 +6,12 @@ var collections = document.querySelector('#collections');
 var wishlist = document.querySelector('#wishlist');
 var archived = document.querySelector('#archived');
 
+allCourses.remove();
 collections.remove();
 wishlist.remove();
 archived.remove();
+header.parentNode.insertBefore(allCourses, header.nextSibling);
+
 
 navBar.addEventListener('click', selectNavOption);
 
@@ -28,16 +32,24 @@ function highlightNavButton(event) {
 function switchContent(event) {
   switch (event.target.id) {
     case 'all-courses-nav':
-      console.log('courses');
+      changeMain(allCourses);
       break;
     case 'collections-nav':
-      console.log('collections');
+      changeMain(collections);
       break;
     case 'wishlist-nav':
-      console.log('wishlist');
+      changeMain(wishlist);
       break;
     case 'archived-nav':
-      console.log('archived');
+      changeMain(archived);
       break;
   }
+}
+
+function changeMain(node) {
+  allCourses.remove();
+  collections.remove();
+  wishlist.remove();
+  archived.remove();
+  header.parentNode.insertBefore(node, header.nextSibling);
 }
