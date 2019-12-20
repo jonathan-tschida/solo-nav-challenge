@@ -1,0 +1,59 @@
+/* General Layout */
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Helvetica', sans-serif;
+}
+
+nav,
+main {
+  display: flex;
+}
+
+main {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Header */
+header {
+  background-color: gray;
+  padding: 20px 20px 0px 20px;
+}
+
+h1 {
+  padding: 20px 5px;
+  color: white;
+}
+
+nav button {
+  margin-right: 10px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2em;
+  padding: 5px;
+  border-bottom: 4px solid gray;
+}
+
+nav button:hover {
+  border-bottom: 4px solid lightGray;
+}
+
+nav button:active {
+
+}
+
+nav button:focus {
+  outline: none;
+}
+
+/* All Courses */
+
+/* Collections and Archive */
+h2 {
+  font-weight: normal;
+}
+
+/* Wishlist */
