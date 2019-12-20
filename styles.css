@@ -49,6 +49,10 @@ nav button:focus {
   outline: none;
 }
 
+nav button.selected {
+  border-bottom: 4px solid lightGray;
+}
+
 /* All Courses */
 
 /* Collections and Archive */
