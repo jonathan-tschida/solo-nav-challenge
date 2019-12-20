@@ -6,11 +6,7 @@ var collections = document.querySelector('#collections');
 var wishlist = document.querySelector('#wishlist');
 var archived = document.querySelector('#archived');
 
-allCourses.remove();
-collections.remove();
-wishlist.remove();
-archived.remove();
-header.parentNode.insertBefore(allCourses, header.nextSibling);
+changeMain(allCourses);
 
 
 navBar.addEventListener('click', selectNavOption);
